@@ -1,10 +1,10 @@
 //ruta: /api/usuarios
 
 const { Router } = require('express')
+const { validarCampos } = require('../middlewares/validar-campos')
+const { validarJWT } = require('../helpers/validar-jwt');
 const { check } = require('express-validator')
 const { getUsuarios, crearUsuarios, actualizarUsuario, borrarUsuario } = require('../controllers/usuarios');
-const { validarJWT } = require('../helpers/validar-jwt');
-const { validarCampos } = require('../middlewares/validar-campos')
 
 
 const router = Router();
