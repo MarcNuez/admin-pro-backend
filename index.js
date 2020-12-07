@@ -11,6 +11,9 @@ const app = express();
 //BD connection
 dbConnection();
 
+//directorio publico
+app.use(express.static('public'))
+
 
 //config cors
 
